@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'productos'
 ]
 
 MIDDLEWARE = [
@@ -72,11 +73,15 @@ WSGI_APPLICATION = 'market.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
+# ruta para ir a la base de datos
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': "market_web",
+        "USER": "postgres",
+        "PASSWORD": "Sandoval#1996",
+        "HOST": "localhost",
+        "PORT": "5432"
     }
 }
 
