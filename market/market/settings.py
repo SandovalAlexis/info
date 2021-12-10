@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'market.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': "market_web",
+        'NAME': "web",
         "USER": "postgres",
         "PASSWORD": "Sandoval#1996",
         "HOST": "localhost",
