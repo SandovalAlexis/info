@@ -93,28 +93,29 @@
 
     <body class="text-center">
         
-        <main class="form-signin">
+        <main class="form-signin" method="POST">
             <form>
+                <h1>Iniciar sesión</h1>
                 <!--
                 <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
                 <h1 class="h3 mb-3 fw-normal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Por favor, registrese</font></font></h1>
                 -->
                 <div class="form-floating">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com">
-                    <label for="floatingInput"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dirección de correo electrónico</font></font></label>
+                    <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com" name="usurname">
+                    <label for="floatingInput"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuario</font></font></label>
                 </div>
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" name="password">
                     <label for="floatingPassword"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contraseña</font></font></label>
                 </div>
 
                 <div class="checkbox mb-3">
                     <label>
-                        <input type="checkbox" value="remember-me"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Recuérdame</font></font>
+                        <input type="checkbox" value="remember-me"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Recuérdame</font></font>
                     </label>
                 </div>
                 <button class="w-100 btn btn-lg btn-primary" type="submit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Registrarse</font></font></button>
-                <p class="mt-5 mb-3 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">© 2017–2021</font></font></p>
+                <p class="mt-5 mb-3 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{% url 'inicio' %}">Ir al Inicio</a></p>
             </form>
         </main>
         <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
