@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% load static %} <!-- filtro de django a hatml-->
 <html lang="es" class="translated-ltr">
     <head>
         <meta charset="utf-8">
@@ -45,17 +45,60 @@
 
         
         <!-- Custom styles for this template -->
-        <link href="signin.css" rel="stylesheet">
+        <link href="{% static 'css/login.css'%}" rel="stylesheet">
         <link type="text/css" rel="stylesheet" charset="UTF-8" href="https://translate.googleapis.com/translate_static/css/translateelement.css">
+        <style type="text/css">
+            html,
+            body {
+            height: 100%;
+            }
+
+            body {
+            display: flex;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+            }
+
+            .form-signin {
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: auto;
+            }
+
+            .form-signin .checkbox {
+            font-weight: 400;
+            }
+
+            .form-signin .form-floating:focus-within {
+            z-index: 2;
+            }
+
+            .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            }
+
+            .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            }
+
+        </style> 
     </head>
 
     <body class="text-center">
         
         <main class="form-signin">
             <form>
+                <!--
                 <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
                 <h1 class="h3 mb-3 fw-normal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Por favor, registrese</font></font></h1>
-
+                -->
                 <div class="form-floating">
                     <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com">
                     <label for="floatingInput"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dirección de correo electrónico</font></font></label>
@@ -75,13 +118,17 @@
             </form>
         </main>
         <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+            
             <div style="padding: 8px;">
+                
                 <div>
                     <div class="logo">
                         <img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Translate">
-                    </div>
+                    </div> 
                 </div>
+
             </div>
+           
             <div class="top" style="padding: 8px; float: left; width: 100%;">
                 <h1 class="title gray">Original text</h1>
             </div>
