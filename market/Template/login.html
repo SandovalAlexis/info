@@ -101,7 +101,7 @@
                 <h1 class="h3 mb-3 fw-normal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Por favor, registrese</font></font></h1>
                 -->
                 <div class="form-floating">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="nombre@ejemplo.com" name="usurname">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="" name="usurname">
                     <label for="floatingInput"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuario</font></font></label>
                 </div>
                 <div class="form-floating">
@@ -109,12 +109,19 @@
                     <label for="floatingPassword"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contraseña</font></font></label>
                 </div>
 
+                <select name="OS">
+                    <option value="1"></option> 
+                    <option value="2">Administrador</option> 
+                    <option value="3">winter</option>
+                    <option value="10">Usuario</option>  
+                </select>
+
                 <div class="checkbox mb-3">
                     <label>
                         <input type="checkbox" value="remember-me"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Recuérdame</font></font>
                     </label>
                 </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Registrarse</font></font></button>
+                <button class="w-100 btn btn-lg btn-primary" type="submit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Iniciar</font></font></button>
                 <p class="mt-5 mb-3 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{% url 'inicio' %}">Ir al Inicio</a></p>
             </form>
         </main>
