@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
+
+        <title>Blog</title>
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/pricing/">
+
+        <!-- Bootstrap core CSS -->
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <!-- Custom styles for this template 
+        <link href="pricing.css" rel="stylesheet">-->
+    </head>
+    
+    
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+    
+          @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+              font-size: 3.5rem;
+            }
+          }  
+    </style>
+    <body>
+        <nav class="navbar">
+            <h2>Cambiando el Futuro</h2>
+            
+            <ul class="nav justify-content-end", class="nav nav-pills" >
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Acerca de</a>
+                </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Quienes somos</a>
+                </li>
+            
+                <li class="nav-item">
+                    <li class="nav-link"> 
+                        {% if user.is_authenticated %}
+                            <a class="w-100 btn-btn-primary" href="{% url 'logout' %}">Cerrar sesión</a>
+                        {% else %}
+                            <a class="w-100 btn-btn-primary" href="{% url 'login' %}">Iniciar sesión</a>
+                        {% endif %}
+                    </li>
+                     
+                    <!--
+                    <button type="button" class="w-100 btn-btn-primary">Iniciar sesión</button>
+                    
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+                    {% else %}
+                        <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+                    {% endif %}
+                    -->
+                </li>
+            </ul>
+            
+          </nav>
+        <main> 
+            <div class="pricing-header px-2 py-2 pt-md-3 pb-md-3 mx-auto text-center">
+                <h1 class="display-6">Bienvenidos</h1>
+                <h2 class="display-6">A los objetivos y metas de desarrollo sostenible</h2>
+                <p class="lead">17 objetivos para transformar nuestro mundo
+                    Los Objetivos de desarrollo sostenible son el plan maestro para conseguir un futuro sostenible para todos. Se interrelacionan entre sí e incorporan los desafíos globales a los que nos enfrentamos día a día, como la pobreza, la desigualdad, el clima, la degradación ambiental, la prosperidad, la paz y la justicia. Para no dejar a nadie atrás, es importante que logremos cumplir con cada uno de estos objetivos para 2030. Si quieres saber más sobre algún tema o objetivo en especial, pincha sobre el objetivo que te interese.</p>
+            </div>
+
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    
+                    {% block contenido %}
+                        
+                    {% endblock contenido %}
+
+                </div>
+            </div>
+        </main>   
+                <footer class="text-muted py-5">
+                    <div class="container">
+                      <p class="float-end mb-1">
+                        <a href="{% url 'inicio' %}">Ir al Inicio</a>
+                      </p>
+                      <p class="mb-1">Sitio desarrollado por la comision 4 del Informatorio</p>
+                    </div>
+                </footer>
+        
+
+
+    <!-- Bootstrap core JavaScript
+        
+        
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    
+    </body>
+</html>

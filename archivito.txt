@@ -132,3 +132,30 @@ parte del body de login
 
 superuser: Usuario: admin 
            contraseña: sandoval1234
+
+barra de navegacion
+         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Inicio<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Acerca de</a>
+            </li>
+        </ul>
+
+
+        .card-deck .card {
+            min-width: 220px;
+          }
+
+
+barra de navegacion
+          <p class="text-right">Acerca de</p>
+          <div class="row">
+              
+              <div class="col-md-0">
+                  <div class="text-right">
+                      <button class="btn btn-primary" type="submit">Iniciar sesión</button>
+                  </div>
+              </div>
+          </div>
