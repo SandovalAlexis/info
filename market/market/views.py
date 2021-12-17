@@ -7,6 +7,8 @@ def inicio(request):
         "producto" : Producto.objects.all()
     }
     return render(request, "inicio.html", context)
-
+"""
 def login(request):
+    
     return render(request, "login.html")
+"""

@@ -29,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = reverse_lazy("login")
 LOGIN_REDIRECT_URL = reverse_lazy("inicio") # esta funcion redirecciona el camino despues de ingresar los datos bien en el registro 
 
 # Application definition

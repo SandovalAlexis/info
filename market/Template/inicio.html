@@ -6,9 +6,18 @@
     <title></title>
     </head>
     <body>
-        <a href="{% url 'login' %}">Iniciar sesión</a>
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}">Cerrar sesión</a>
+        {% else %}
+            <a href="{% url 'login' %}">Iniciar sesión</a>
+        {% endif %}
 
-        <h1>Hola {{usuario.nombre}}!</h1>
+        {% if user.is_authenticated %}
+            <h1>¡Hola {{user.get_full_name}}!</h1>
+        {% else %}
+            <h1>Bienvenido a nuestro sitio</h1>
+        {% endif %}
+        
         
         <ul>
             {% for p in producto %}

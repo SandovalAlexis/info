@@ -23,5 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.inicio, name= "inicio"),
     
-    path('login/', auth_views.LoginView.as_view(template_name="login.html"), name= "login")
+    #Vista de ingreso a login
+    path('login/', auth_views.LoginView.as_view(template_name="login.html"), name= "login"),
+    #Vista de cerrar sesion, Logout
+    path('logout/', auth_views.logout_then_login, name= "logout")
 ]

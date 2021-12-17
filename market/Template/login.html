@@ -1,4 +1,5 @@
 {% load static %} <!-- filtro de django a hatml-->
+
 <html lang="es" class="translated-ltr">
     <head>
         <meta charset="utf-8">
@@ -28,6 +29,7 @@
         -->
 
         <style>
+        <!--
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -50,125 +52,76 @@
         <style type="text/css">
             html,
             body {
-            height: 100%;
+                height: 100%;
             }
-
+    
             body {
+            display: flex;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+            align-content: space-around;
+            justify-content: space-around;
+            align-items: center;
+            
+            display: flex;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+            align-content: space-around;
+            justify-content: space-around;
+            
+            display: flex;
+            align-items: stretch;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+            align-content: space-around;
+            justify-content: space-around;
+            
             display: flex;
             align-items: center;
             padding-top: 40px;
             padding-bottom: 40px;
             background-color: #f5f5f5;
+            align-content: space-around;
+            justify-content: space-around;
+            
+            display: flex;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+            align-content: space-around;
             }
-
-            .form-signin {
-            width: 100%;
-            max-width: 330px;
-            padding: 15px;
-            margin: auto;
-            }
-
-            .form-signin .checkbox {
-            font-weight: 400;
-            }
-
-            .form-signin .form-floating:focus-within {
-            z-index: 2;
-            }
-
-            .form-signin input[type="email"] {
-            margin-bottom: -1px;
-            border-bottom-right-radius: 0;
-            border-bottom-left-radius: 0;
-            }
-
-            .form-signin input[type="password"] {
-            margin-bottom: 10px;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-            }
-
+            
+           
         </style> 
     </head>
 
     <body class="text-center">
-        
-        <main class="form-signin" method="POST"> 
-            <form>
+        <form class="form-signin" method="POST">{% csrf_token %}
+            <div class="text-center mb-4">
                 <h1>Iniciar sesión</h1>
-                <!--
-                <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-                <h1 class="h3 mb-3 fw-normal"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Por favor, registrese</font></font></h1>
-                -->
-                <div class="form-floating">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="" name="usurname">
-                    <label for="floatingInput"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Usuario</font></font></label>
+                <div class="form-group">
+                    <label for="inputUsername">Ingrese su Usuario</label>
+                    <input type="text" class="form-control" id="inputUsername" aria-describedby="emailHelp" placeholder="" required="" autofocus="" name="username">
+                    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
                 </div>
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" name="password">
-                    <label for="floatingPassword"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contraseña</font></font></label>
+                <div class="form-group">
+                    <label for="InputPassword">Contraseña</label>
+                    <input type="password" class="form-control" id="InputPassword" placeholder="" required="" name="password">
                 </div>
-
-                <select name="OS">
-                    <option value="1"></option> 
-                    <option value="2">Administrador</option> 
-                    <option value="3">winter</option>
-                    <option value="10">Usuario</option>  
-                </select>
-
-                <div class="checkbox mb-3">
-                    <label>
-                        <input type="checkbox" value="remember-me"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Recuérdame</font></font>
-                    </label>
-                </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Iniciar</font></font></button>
-                <p class="mt-5 mb-3 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{% url 'inicio' %}">Ir al Inicio</a></p>
-            </form>
-        </main>
-        <!--
-        <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
-            
-            <div style="padding: 8px;">
-                
-                <div>
-                    <div class="logo">
-                        <img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Translate">
-                    </div> 
-                </div>
-
-            </div>
-           
-            <div class="top" style="padding: 8px; float: left; width: 100%;">
-                <h1 class="title gray">Original text</h1>
-            </div>
-            <div class="middle" style="padding: 8px;">
-                <div class="original-text">
-                </div>
-            </div>
-            <div class="bottom" style="padding: 8px;">
-                <div class="activity-links">
-                    <span class="activity-link">Contribute a better translation</span>
-                    <span class="activity-link"></span>
-                </div>
-                <div class="started-activity-container">
-                    <hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;">
-                    <div class="activity-root">
+                <div class="form-group form-check">
+                    <div class="col-md-1">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Recuerdame</label>
                     </div>
                 </div>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+                <p class="mt-3 mb-3 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><a href="{% url 'inicio' %}">Ir al Inicio</a></p>
             </div>
-            <div class="status-message" style="display: none;">
-            </div>
-        </div>
-       
-
-        <div class="goog-te-spinner-pos">
-            <div class="goog-te-spinner-animation">
-                <svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66">
-                    <circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30">
-                    </circle>
-                </svg>
-            </div>
-        </div>
-         -->
+        </form>
+        
     </body>
 </html>
