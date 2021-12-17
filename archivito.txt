@@ -126,3 +126,9 @@ parte del body de login
                         </div>
                     </div>
                      -->
+
+
+
+
+superuser: Usuario: admin 
+           contraseña: sandoval1234

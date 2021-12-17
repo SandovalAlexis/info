@@ -32,6 +32,9 @@ ALLOWED_HOSTS = []
 LOGIN_URL = reverse_lazy("login")
 LOGIN_REDIRECT_URL = reverse_lazy("inicio") # esta funcion redirecciona el camino despues de ingresar los datos bien en el registro 
 
+#Modelo de usuario creado por nosotros
+AUTH_USER_MODEL = "usuario.Usuario"
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.productos'
+    'apps.productos',
+    'apps.usuario'
 ]
 
 MIDDLEWARE = [
